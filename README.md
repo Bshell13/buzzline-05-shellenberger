@@ -1,11 +1,8 @@
-# buzzline-05-case
+# buzzline-05-shellenberger
 
-Nearly every streaming analytics system stores processed data somewhere for further analysis, historical reference, or integration with BI tools.
+This project is to demonstrate streaming data, produce insights, and store data in a new location. The insight that it will create is a score with sentiment based on the message length, then store this score in a SQLite file.
 
-In this example project, we incorporate a relational data store. 
-We use SQLite, but the example could be altered to work with MySQL, PostgreSQL, or MongoDB.
-
-## VS Code Extensions
+## VS Code Extensions (optional)
 
 - Black Formatter by Microsoft
 - Markdown All in One by Yu Zhang
@@ -17,11 +14,17 @@ We use SQLite, but the example could be altered to work with MySQL, PostgreSQL, 
 - SQLite Viewer by Florian Klampfer
 - WSL by Microsoft (on Windows Machines)
 
-## Task 1. Use Tools from Module 1 and 2
+## Task 1. Setup tools
 
-Before starting, ensure you have completed the setup tasks in <https://github.com/denisecase/buzzline-01-case> and <https://github.com/denisecase/buzzline-02-case> first. 
+Here are the things you need to install/download before running the project:</br>
 
-Versions matter. Python 3.11 is required. See the instructions for the required Java JDK and more. 
+1. Install Python Version 3.11
+2. Setup Kafka [SETUP-KAFKA](SETUP-KAFKA.md)
+3. 
+
+Before starting, ensure you have Kafka downloaded a running properly for your machine. 
+
+Versions matter. Python 3.11 is required while using Kafka. See the instructions for the required Java JDK and more. 
 
 ## Task 2. Copy This Example Project and Rename
 
@@ -96,17 +99,13 @@ Use the commands below to activate .venv, and start the consumer.
 Windows:
 ```shell
 .venv\Scripts\activate
-py -m consumers.kafka_consumer_case
-OR
-py -m consumers.file_consumer_case
+py -m consumers.consumer_shellenberger
 ```
 
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m consumers.kafka_consumer_case
-OR
-python3 -m consumers.file_consumer_case
+python3 -m consumers.consumer_shellenberger
 ```
 
 ---
