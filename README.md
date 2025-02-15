@@ -1,6 +1,6 @@
 # buzzline-05-shellenberger
 
-This project is to demonstrate streaming data, produce insights, and store data in a new location. The insight that it will create is a score with sentiment based on the message length, then store this score in a SQLite file.
+This project is to demonstrate streaming data, produce insights, and store data in a new location. The insight it will create is a score for categories based on the sentiment and message length, then store this score in a SQLite file.
 
 ## VS Code Extensions (optional)
 
