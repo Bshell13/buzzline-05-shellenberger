@@ -16,21 +16,15 @@ This project is to demonstrate streaming data, produce insights, and store data 
 
 ## Task 1. Setup tools
 
-Here are the things you need to install/download before running the project:</br>
+Here are the things you need to install/download before running the project:
 
-1. Install Python Version 3.11
-2. Setup Kafka [SETUP-KAFKA](SETUP-KAFKA.md)
-3. 
-
-Before starting, ensure you have Kafka downloaded a running properly for your machine. 
-
-Versions matter. Python 3.11 is required while using Kafka. See the instructions for the required Java JDK and more. 
+1. Install Python Version 3.11 and 
+2. Setup Kafka, Java, and wsl [SETUP-KAFKA](SETUP-KAFKA.md)
 
 ## Task 2. Copy This Example Project and Rename
 
 Once the tools are installed, copy/fork this project into your GitHub account
 and create your own version of this project to run and experiment with. 
-Follow the instructions in [FORK-THIS-REPO.md](https://github.com/denisecase/buzzline-01-case/docs/FORK-THIS-REPO.md).
 
 OR: For more practice, add these example scripts or features to your earlier project. 
 You'll want to check requirements.txt, .env, and the consumers, producers, and util folders. 
@@ -39,10 +33,20 @@ Use your README.md to record your workflow and commands.
 
 ## Task 3. Manage Local Project Virtual Environment
 
-Follow the instructions in [MANAGE-VENV.md](https://github.com/denisecase/buzzline-01-case/docs/MANAGE-VENV.md) to:
+You will need to create a virtual environment with Python 3.11 for Kafka to run properly.
+
 1. Create your .venv
+``` shell
+py -3.11 -m venv .venv
+```
 2. Activate .venv
+``` shell
+.venv/Scripts/activate
+```
 3. Install the required dependencies using requirements.txt.
+``` shell
+py -m pip install -r requirements.txt
+```
 
 ## Task 4. Start Zookeeper and Kafka (Takes 2 Terminals)
 
