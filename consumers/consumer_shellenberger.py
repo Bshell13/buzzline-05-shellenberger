@@ -60,9 +60,8 @@ def process_message(message: dict) -> None:
     
     try:
         processed_message = {
-            "sentiment": float(message.get("sentiment", 0.0)),
-            "message_length": int(message.get("message_length", 0)),
-            "message_score" : round(message.get('sentiment') * message.get('message_length'), 2)
+            "category" : message.get("category"),
+            "message_score" : round(message.get('sentiment') * message.get('message_length'), 2)            
         }
         logger.info(f"Processed message: {processed_message}")
         return processed_message

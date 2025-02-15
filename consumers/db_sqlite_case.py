@@ -59,14 +59,8 @@ def init_db(db_path: pathlib.Path):
             cursor.execute(
                 """
                 CREATE TABLE IF NOT EXISTS streamed_messages (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    message TEXT,
-                    author TEXT,
-                    timestamp TEXT,
                     category TEXT,
-                    sentiment REAL,
-                    keyword_mentioned TEXT,
-                    message_length INTEGER
+                    message_score REAL
                 )
             """
             )
@@ -100,17 +94,12 @@ def insert_message(message: dict, db_path: pathlib.Path) -> None:
             cursor.execute(
                 """
                 INSERT INTO streamed_messages (
-                    message, author, timestamp, category, sentiment, keyword_mentioned, message_length
-                ) VALUES (?, ?, ?, ?, ?, ?, ?)
+                    category, message_score
+                ) VALUES (?, ?)
             """,
                 (
-                    message["message"],
-                    message["author"],
-                    message["timestamp"],
                     message["category"],
-                    message["sentiment"],
-                    message["keyword_mentioned"],
-                    message["message_length"],
+                    message['message_score']
                 ),
             )
             conn.commit()
