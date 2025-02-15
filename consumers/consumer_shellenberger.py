@@ -57,15 +57,12 @@ def process_message(message: dict) -> None:
     """
     logger.info("Called process_message() with:")
     logger.info(f"   {message=}")
+    
     try:
         processed_message = {
-            "message": message.get("message"),
-            "author": message.get("author"),
-            "timestamp": message.get("timestamp"),
-            "category": message.get("category"),
             "sentiment": float(message.get("sentiment", 0.0)),
-            "keyword_mentioned": message.get("keyword_mentioned"),
             "message_length": int(message.get("message_length", 0)),
+            "message_score" : round(message.get('sentiment') * message.get('message_length'), 2)
         }
         logger.info(f"Processed message: {processed_message}")
         return processed_message
