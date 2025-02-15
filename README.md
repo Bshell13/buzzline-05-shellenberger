@@ -19,7 +19,7 @@ This project is to demonstrate streaming data, produce insights, and store data 
 Here are the things you need to install/download before running the project:
 
 1. Install Python Version 3.11 and 
-2. Setup Kafka, Java, and wsl [SETUP-KAFKA](SETUP-KAFKA.md)
+2. Setup Kafka, Java, and wsl (if using windows) [SETUP-KAFKA](SETUP-KAFKA.md)
 
 ## Task 2. Copy This Example Project and Rename
 
@@ -53,8 +53,8 @@ py -m pip install -r requirements.txt
 If Zookeeper and Kafka are not already running, you'll need to restart them.
 See instructions at [SETUP-KAFKA.md] to:
 
-1. Start Zookeeper Service ([link](https://github.com/denisecase/buzzline-02-case/blob/main/docs/SETUP-KAFKA.md#step-7-start-zookeeper-service-terminal-1))
-2. Start Kafka Service ([link](https://github.com/denisecase/buzzline-02-case/blob/main/docs/SETUP-KAFKA.md#step-8-start-kafka-terminal-2))
+1. Start Zookeeper Service ([link](SETUP-KAFKA.md#step-7-start-zookeeper-service-terminal-1))
+2. Start Kafka Service ([link](SETUP-KAFKA.md#step-8-start-kafka-terminal-2))
 
 ---
 
@@ -62,8 +62,8 @@ See instructions at [SETUP-KAFKA.md] to:
 
 This will take two more terminals:
 
-1. One to run the producer which writes messages. 
-2. Another to run the consumer which reads messages, processes them, and writes them to a data store. 
+1. One to run the producer which writes messages.
+2. Another to run the consumer which reads messages, processes them, and writes them to a data store.
 
 ### Producer (Terminal 3) 
 
